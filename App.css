@@ -1,0 +1,148 @@
+/* App.css - Restore the Layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* LEFT SIDE: FORM */
+.form-panel {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.form-panel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+input:read-only, textarea:read-only {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* RIGHT SIDE: CHAT */
+.chat-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #e4e6eb;
+  color: #000;
+  border-bottom-left-radius: 2px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: #fff;
+  border-bottom-right-radius: 2px;
+}
+
+.loading-bubble {
+  align-self: flex-start;
+  background-color: #e4e6eb;
+  padding: 10px;
+  border-radius: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+.input-area {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 12px 20px;
+  outline: none;
+}
+
+.input-area button {
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.input-area button:hover {
+  background-color: #006bcf;
+}

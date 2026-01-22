@@ -11,7 +11,7 @@ from langchain_core.messages import HumanMessage, BaseMessage, SystemMessage, To
 
 # --- 1. SETUP ---
 # PASTE GROQ KEY HERE
-os.environ["GROQ_API_KEY"] = "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" 
+os.environ["GROQ_API_KEY"] = "" #replace your groq api key
 
 # Use Llama 3.1 8B Instant
 llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
@@ -150,4 +150,5 @@ async def chat_endpoint(request: ChatRequest):
         return {
             "reply": f"System Error: {str(e)}", 
             "updated_form": current_form_state.dict()
+
         }
